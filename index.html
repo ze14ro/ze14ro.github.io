@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>main</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+
+<body>  
+  <body style="background-color: #000000"></body>
+
+	 <div style="text-align: center;">
+    <span id="clock" style="color:rgb(255, 255, 255);  font-family: 'LAB디지털'; font-size: 70px;"></span>
+   </div>
+
+   <script>
+    var Target = document.getElementById("clock");
+    function clock() {
+        var time = new Date();
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+
+        Target.innerText = 
+        `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;}
+    clock();
+    setInterval(clock, 1000);
+    </script>
+
+
+</div>
+  <div class="w3-content w3-section" style="max-width:1000px">
+    <img class="mySlides" src="IMG_3.jpg" style="width:100%">
+    <img class="mySlides" src="IMG_4.jpg" style="width:100%">
+    <img class="mySlides" src="IMG_1.jpg" style="width:100%">
+  </div>
+</div>
+
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 7000);
+  }
+  </script>
+
+<div style="text-align: center; color:rgb(255, 255, 255); font-family: 'MinSans-Light';">
+<p><b>Copyright 2022.정하영. All rights reserved.</b></p> </div>
+
+<div style="text-align: center; color:rgb(0, 0, 0); font-family: 'MinSans-Light';">
+<p><a href="https://www.flaticon.com/kr/free-icons/" title="사람 아이콘">사람 아이콘  제작자: POD Gladiator - Flaticon</a><br>
+<a href="https://www.flaticon.com/kr/free-icons/" title="갤러리 아이콘">갤러리 아이콘  제작자: adrianadam - Flaticon</a><br>
+<a href="https://www.flaticon.com/kr/free-icons/" title="전보 아이콘">전보 아이콘  제작자: Freepik - Flaticon</a><br>
+<a href="https://www.flaticon.com/kr/free-icons/" title="태양 아이콘">태양 아이콘  제작자: Slidicon - Flaticon</a><br>
+<a href="https://www.flaticon.com/kr/free-icons/" title="마케팅 아이콘">마케팅 아이콘  제작자: Freepik - Flaticon</a>
+</div>
+
+</body>
+</html>
